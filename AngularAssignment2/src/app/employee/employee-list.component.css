@@ -1,0 +1,41 @@
+
+			#mainDiv{margin:40px 0px 20px 220px;
+        border:1px solid black;
+        width:50%;
+        height:40%;
+        border-radius:5px;}	
+        
+        #innerDivTop{
+          height:70%;
+          border-radius:5px;
+          }
+        #innerDivBottom{
+          height:15%;
+          border-radius:5px;
+          }
+          table,tr,td{
+          border-collapse:collapse;
+          border: 1px solid black; 
+          margin: 5px;
+          }
+          tr,td{
+            width: 50%;
+          }
+          table{
+  
+          height:100%;
+          width:98%;
+          }
+          .buttonEditDelete{
+          float:right;
+         margin-bottom: 1px;
+          }
+    .buttonEditDelete{
+    float:right;
+    margin:6px;
+    }
+    #languageStyle{
+     margin-left: 60px;
+    }
+
+   

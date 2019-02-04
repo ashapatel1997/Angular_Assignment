@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Employee List</title>
+</head>
+<body>
+  <div style="border:1px solid black;width: 70%;margin-left: 200px;">
+      <div style="text-align:center;margin:20px ">
+          <h2 >
+            Employee Management
+          </h2>
+        </div>
+    <div id="mainDiv" *ngFor="let list of employee">
+        <div id="innerDivTop">
+           <table>
+           <tr>
+             <td>First Name: {{list.firstName}}</td>
+             <td>User Name: {{list.userName}}</td>
+           </tr>
+           <tr>
+             <td>Last Name: {{list.lastName}}</td>
+             <td>Password: {{list.password}}</td>
+           </tr>
+           <tr>
+             <td>Email: {{list.email}}</td>
+             <td>Gender: {{list.gender}}</td>
+           </tr>
+           <tr>
+             <td>Contact No.: {{list.contact}}</td>
+             <td>Qualification: {{list.qualification}}</td>
+           </tr>
+           <tr>
+             <td>Address: {{list.address}}</td>
+             <td>Experience: {{list.experience}}</td>
+           </tr>
+            <tr >
+              <td colspan="2">Coding Language:  <br/>
+                 <div id="languageStyle">C/C++:{{list.IsEnabled[0]}}<br/>
+                  Java:{{list.IsEnabled[1]}}<br/>
+                  C#:{{list.IsEnabled[2]}}<br/>
+                   PHP:{{list.IsEnabled[3]}}<br/>
+                   Python:{{list.IsEnabled[4]}}<br/></div> 
+              </td> 
+            </tr>
+        </table>
+        
+        </div>
+            <div id="innerDivBottom">
+              <button style="margin-left: 353px;" (click)="deleteEmployee(list.firstName)">DELETE</button>
+                <button (click)="editEmployee(list.firstName)">EDIT</button>  
+            </div>
+       </div >
+
+     <a routerLink="/employee-add"> <button style="margin-left: 420px;">Add</button></a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+     
+</head>
+    <body>
+        <div id="mainDiv">
+                <form  (ngSubmit)="display()" >
+                    <div> First Name:<br/>
+                        <input type="text" name="firstName" id="firstName" autocomplete="off" [(ngModel)]="employee.firstName"/>
+                    </div><br/>
+
+                    <div>Last Name:<br/>
+                        <input type="text" name="lastName"  autocomplete="off" [(ngModel)]="employee.lastName"/>
+                    </div><br/>
+
+                    <div>Email:<br/>
+                        <input type="email" name="email"  autocomplete="off" [(ngModel)]="employee.email"/>
+                    </div><br/>
+
+                    <div>Contact Number:<br/>
+                        <input type="tel"  name="contact" autocomplete="off" [(ngModel)]="employee.contact"/>
+                    </div><br/>
+                        
+                    <div>Address:<br/>
+                        <textarea name="address" rows="3"  cols="22" [(ngModel)]="employee.address"></textarea><br/><br/>
+                    </div><br/>
+
+                    <div>Username:<br/>
+                        <input type="text" name="userName"  autocomplete="off" [(ngModel)]="employee.userName"/>
+                    </div><br/>
+
+                    <div>Password:<br/>
+                        <input type="password" name="password"   autocomplete="off" [(ngModel)]="employee.password"/>
+                    </div><br/>
+
+                    <div id="genderId">Gender:<br/>
+                        <input type="radio"  value="Male" id="m1" [(ngModel)]="employee.gender" name="gender">
+                        <label> Male </label><br/>
+                        <input type="radio"  value="Female"  id="m2" [(ngModel)]="employee.gender"name="gender" ><label> Female </label>
+                    </div><br/>
+
+                    <div >Qualification:<br/>
+                        <select id="qualificationId" style="width:150px" [(ngModel)]="employee.qualification" name="qualification">
+                                <option value="" disabled selected>--select--</option>
+                            <option *ngFor="let x of qualification">{{x}}</option>
+                        </select>
+                    </div><br/>
+
+                    <div >Experience:<br/>
+                        <select id="experienceId" style="width:120px" [(ngModel)]="employee.experience" name="experience">
+                            <option value="" disabled selected>--select--</option>
+                            <option *ngFor="let y of experience">{{y}}</option>
+                        </select>
+                    </div><br/>
+
+                    <div>Coding Language:<br/>
+                        <div *ngFor="let language of languages;let i=index">
+                                <input type="checkbox" name="{{language}}" value="{{language}}"   [(ngModel)]="employee.IsEnabled[i]" >
+                                <label >{{language}} </label>
+                        </div>
+                    </div><br/>
+
+                    <button type="submit" value="Submit">Submit</button>
+            
+            </form>
+        </div>
+        <!-- <script src="JavaScript.js"></script> -->
+    </body>
+</html>
